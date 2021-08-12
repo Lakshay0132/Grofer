@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=a, initial-scale=1.0" />
+    <title>Add Vegetable</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="addveg.css">
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-12 div1">
+        <button class="home_btn" onclick="home()">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i
+          ><i class="fa fa-chevron-left" aria-hidden="true"></i>Go to Home
+        </button>
+        <h1 class="heading">Add Vegetables</h1>
+      </div>
+    </div>
+    <form action="" class="form" id="form_details">
+      <div class="col-sm-6 div_label">
+        <label for="Name_veg" class="label">Vegetable name  <span>  (English)</span> :</label>
+      </div>
+      <div class="col-sm-6 div_input">
+        <input
+          type="text "
+          placeholder="English name"
+          class="input"
+          id="veg_name"
+        />
+      </div>
+      <br /><br /><br /><br />
+      <div class="col-sm-6 div_label">
+        <label for="Name_sabji" class="label">Vegetable name  <span>  (Hindi)</span> :</label>
+      </div>
+      <div class="col-sm-6 div_input">
+        <input type="text " placeholder="Hindi name" class="input" id="sabji" />
+      </div>
+      <br /><br /><br /><br />
+      <div class="col-sm-6 div_label">
+        <label for="Name_veg" class="label">Vegetable price <span>(per kg)</span> :</label>
+      </div>
+      <div class="col-sm-6 div_input">
+        <input
+          type="text "
+          placeholder="Price / kg"
+          class="input"
+          id="price"
+        />
+      </div>
+      <br /><br /><br />
+      <div class="col-sm-6 div_label"><br>
+        <label for="Name_veg" class="label">Vegetable Photo:</label>
+      </div>
+      <div class="col-sm-6 div_input">
+        <br><input
+         class="img_btn"
+          type="file"
+          accept="image/*"
+          name="Photo"
+          id="input_pic"
+          onchange="readURL(this);"
+        />
+      </div>
+      <br /><br /><br />
+
+      <div><img class="img_out" id="output" /></div>
+      <div ><button type="submit" class="submit">Submit</button></div>
+    </form>
+    <div>
+      <ol id="vegetable_list" class="veglist">
+
+    </ol>
+    </div>
+    
+  </body>
+  <script>
+    var loadFile = function(event) {
+      var output = document.getElementById('output');
+      // output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+      }
+    };
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAd6fvp92ZmwoyIlc-XxQ6Fu4wze8Vvmlc",
+      authDomain: "login-form-f9ed4.firebaseapp.com",
+      databaseURL: "https://login-form-f9ed4.firebaseio.com",
+      projectId: "login-form-f9ed4",
+      storageBucket: "login-form-f9ed4.appspot.com",
+      messagingSenderId: "801553659551",
+      appId: "1:801553659551:web:99542c5ddb419fcd14d4aa",
+      measurementId: "G-D1YKT3LBT9",
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+  </script>
+  <script src="addveg.js"></script>
+</html>

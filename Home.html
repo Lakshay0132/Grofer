@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegetables</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="showveg.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-sm-6 div_logo">
+        <img src="immm.jpg" alt="home">
+      </div>
+      <div class="col-sm-6 div_sout">
+        <button class="sout_btn" onclick="logout()">Log out <i class="fa fa-sign-out" aria-hidden="true"></i> </button>
+        <a class="profile_btn" href="profile.html" >Profile <i class="fa fa-user" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="row div_tiles" id="veg_tile">
+       <a href="Addveg.html" class="col-sm-3 div_veg"
+        ><div class="">
+          <p class="add_logo">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          </p>
+          <h1>Add Vegetables</h1>
+        </div></a>
+        <div class="col-sm-3 div_veg" id="loading">
+          <br><br><br><br><br><h2>Loading <i class="fa fa-spinner" aria-hidden="true"></i></h2>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+  
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+  
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAd6fvp92ZmwoyIlc-XxQ6Fu4wze8Vvmlc",
+        authDomain: "login-form-f9ed4.firebaseapp.com",
+        databaseURL: "https://login-form-f9ed4.firebaseio.com",
+        projectId: "login-form-f9ed4",
+        storageBucket: "login-form-f9ed4.appspot.com",
+        messagingSenderId: "801553659551",
+        appId: "1:801553659551:web:99542c5ddb419fcd14d4aa",
+        measurementId: "G-D1YKT3LBT9",
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+  
+    </script>
+    <script src="showveg.js"></script>
+</html>

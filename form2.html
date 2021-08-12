@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOgin </title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="row maindiv" id="logindiv">
+      <div class="col-md-6 div1"></div>
+      <div class="col-md-6 div2">
+        <div class="div21">
+          <h1>Login</h1>
+          <br /><br />
+            <form action="#" class="form">
+              <label for="email" class="emaillabel"
+                >Your Email
+                <i class="fa fa-envelope" aria-hidden="true"></i></label
+              ><br />
+              <input
+                type="text"
+                id="email"
+                placeholder="Enter Mail"
+              /><br /><br />
+              <label for="email" class="emaillabel"
+                >Password <i class="fa fa-lock" aria-hidden="true"></i></label
+              ><br />
+              <input
+                type="Password"
+                id="pass"
+                placeholder="Enter Password"
+              /><br />
+              <br /><br />
+              <button class="submit" id="btn" onclick="login()">
+                Login <i class="fa fa-unlock" aria-hidden="true"></i>
+              </button><br>
+              <a class="Reg" href="Register.html" >New User? Register Here... </a>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="userdiv">
+      <h1 id="para">Welcome !!! Yo are logged in To the page</h1>
+      
+      <button id="logout_btn" onclick="logout()">Logout</button>
+    </div> -->
+  </body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAd6fvp92ZmwoyIlc-XxQ6Fu4wze8Vvmlc",
+    authDomain: "login-form-f9ed4.firebaseapp.com",
+    databaseURL: "https://login-form-f9ed4.firebaseio.com",
+    projectId: "login-form-f9ed4",
+    storageBucket: "login-form-f9ed4.appspot.com",
+    messagingSenderId: "801553659551",
+    appId: "1:801553659551:web:99542c5ddb419fcd14d4aa",
+    measurementId: "G-D1YKT3LBT9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="form2.js"></script>
